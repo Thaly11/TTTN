@@ -1,0 +1,6 @@
+.grayhover{
+	border-radius:5px;
+}
+.grayhover:hover{
+	background-color: LightGray;
+}
