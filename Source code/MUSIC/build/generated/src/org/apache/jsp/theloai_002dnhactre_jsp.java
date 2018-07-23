@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class theloai_002dnhactre_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -51,7 +51,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
-      out.write("        <title> MUSIC Trang chủ </title>\n");
+      out.write("        <title> MUSIC </title>\n");
       out.write("        <meta  http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
       out.write("        <link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n");
@@ -61,7 +61,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <script src=\"js/bootstrap.min.js\"></script>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("       ");
+      out.write("        ");
       out.write("\n");
       out.write("<nav class=\"navbar navbar-inverse\">\n");
       out.write("    <div class=\"container-fluid\">\n");
@@ -89,10 +89,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">Quốc gia\n");
       out.write("                        <span class=\"caret\"></span></a>\n");
       out.write("                    <ul class=\"dropdown-menu\">\n");
-      out.write("                        <li><a href=\"quocgia-aumy.jsp\">Âu Mỹ</a></li>\n");
-      out.write("                        <li><a href=\"quocgia-trungquoc.jsp\">Trung Quốc</a></li>\n");
-      out.write("                        <li><a href=\"quocgia-vietnam.jsp\">Việt Nam</a></li>\n");
-      out.write("                        <li><a href=\"quocgia-hanquoc.jsp\">Hàn Quốc</a></li>\n");
+      out.write("                        <li><a href=\"quocgia-auly.jsp\">Âu Mỹ</a></li>\n");
+      out.write("                        <li><a href=\"quocgia-hanquoc.jsp\">Trung Quốc</a></li>\n");
+      out.write("                        <li><a href=\"quocgia-trungquoc.jsp\">Việt Nam</a></li>\n");
+      out.write("                        <li><a href=\"quocgia-thailan.jsp\">Hàn Quốc</a></li>\n");
       out.write("                    </ul>\n");
       out.write("                </li>\n");
       out.write("                <li><a href=\"#\"><span class=\"glyphicon glyphicon-star\"></span> Top CA KHÚC</a></li> \n");
@@ -105,7 +105,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <li>\n");
       out.write("        <form class=\"form-inline\" action=\"\" method=\"GET\" style=\"position: relative; margin-top:8px;\">\n");
       out.write("            <div class=\"form-group\">\n");
-      out.write("                <input type=\"text\" id=\"timphim\" name=\"timbaihat\" class=\"form-control\" placeholder=\"Tìm ca khúc...\">\n");
+      out.write("                <input type=\"text\" id=\"timphim\" name=\"timphim\" class=\"form-control\" placeholder=\"Tìm ca khúc...\">\n");
       out.write("            </div>\n");
       out.write("            <button type=\"submit\" class=\"btn btn-default\"><span class=\"glyphicon glyphicon-search\"></span></button>\n");
       out.write("            <div class=\"list-group\" id=\"suggestbox\" style=\"position: absolute; z-index: 1;\"></div>\n");
@@ -123,8 +123,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"container\">\n");
       out.write("            <div class=\"row\">\n");
       out.write("                <div class=\"col\" style=\"position:relative;\">\n");
-      out.write("                    <a href=\"\" style=\"position:absolute; z-index:1; top:0px; left:0px;\"><img class=\"img-responsive\" src=\"/Hinhanh/beat.png\"></img></a>\n");
-      out.write("                     <div id=\"hangCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\n");
+      out.write("                    <a href=\"\" style=\"position:absolute; z-index:1; top:0px; left:0px;\"><img class=\"img-responsive\"src=\"image/beat.png\"></img></a>\n");
+      out.write("                    <div id=\"hangCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\n");
       out.write("                        <!-- Indicators -->\n");
       out.write("                        <ol class=\"carousel-indicators\" id='imgslidesize'>\n");
       out.write("                            <li data-target=\"#hangCarousel\" data-slide-to=\"0\" class=\"active\" ></li>\n");
@@ -135,7 +135,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("                        <!-- Wrapper for slides -->\n");
       out.write("                        <div class=\"carousel-inner\" role=\"listbox\" id='imgslide'>\n");
-      out.write("                           \n");
+      out.write("                            <!--\n");
+      out.write("                            <div class=\"item active\">\n");
+      out.write("                                <img class=\"img-responsive center-block\" src=\"src/img/testimg.jpg\" alt=\"avenger\">\n");
+      out.write("                            </div>\n");
+      out.write("                            -->\n");
       out.write("                        </div>\n");
       out.write("\n");
       out.write("                        <!-- Left and right controls -->\n");
@@ -152,13 +156,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("        <div class=\"container\">\n");
-      out.write("\t\t\t<div class=\"row\">\n");
-      out.write("\t\t\t\t<div class=\"col\">\n");
-      out.write("\t\t\t\t\t<p style=\"font-size:25px;\"><span class=\"glyphicon glyphicon-menu-hamburger\"></span>CA KHÚC \n");
-      out.write("\t\t\t\t\t\t<a style=\"font-size:25px; float:right;\" href=\"#\">Xem tất cả</a>\n");
-      out.write("\t\t\t\t\t</p>\n");
-      out.write("\t\t\t\t</div>\n");
-      out.write("\t\t\t</div>\n");
+      out.write("            <div class=\"row\">\n");
+      out.write("                <div class=\"col\">\n");
+      out.write("                    <p style=\"font-size:25px; color:white;\"><span class=\"glyphicon glyphicon-menu-hamburger\"></span>CA KHÚC\n");
+      out.write("                        <span style=\"font-size:25px; float:right;\">Xem tất cả</span>\n");
+      out.write("                    </p>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
       out.write("            <div class=\"row\" id=\"musiclist\">\n");
       out.write("               \n");
       out.write("            </div>\n");
@@ -167,7 +171,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            $(document).ready(function () {\n");
       out.write("                var preparedImgSlideHtml = '';\n");
       out.write("                var preparedImgSlideSizeHtml = '';\n");
-      out.write("                $.get(\"http://localhost:3000/music-list\", function (data, status) {\n");
+      out.write("                $.get(\"http://localhost:3000/music-list/nhac-tre\", function (data, status) {\n");
       out.write("                    var resData = JSON.parse(data);\n");
       out.write("                    for(var i = 0; i < resData.length; i++){\n");
       out.write("                        var totalScore = 0;\n");

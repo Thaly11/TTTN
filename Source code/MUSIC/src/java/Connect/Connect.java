@@ -13,16 +13,16 @@ import com.mongodb.Mongo;
 import com.mongodb.util.JSON;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
-import org.json.*;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 /**
  *
  * @author DELL
  */
 public class Connect {
-     public static void main(String[] args) {
+    public static List<TuDien> getTuDien() {
        
           Mongo mongo=new Mongo("localhost",27017); //to establish a connection
           DB db=mongo.getDB("MUSIC");                // select the databse test
@@ -50,13 +50,9 @@ public class Connect {
             float trongso = Float.parseFloat(array.getJSONObject(i).get("trongso").toString());
             int hatgiong = Integer.parseInt(array.getJSONObject(i).get("tuhatgiong").toString());
             list.add(new TuDien(tu,trongso,hatgiong));
-        }System.out.println(list.get(0).getTu()+" "+list.get(0).getTrongSo());
-        
-
-
-
-    
         }
+       
+        return list;
     
-    
+}
 }

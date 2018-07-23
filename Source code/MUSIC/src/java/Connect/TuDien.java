@@ -5,6 +5,8 @@
  */
 package Connect;
 
+import java.util.List;
+
 /**
  *
  * @author DELL
@@ -19,6 +21,11 @@ public class TuDien {
         this.trongSo = trongSo;
         this.tuHatGiong = tuHatGiong;
     }
+
+    public TuDien() {
+        this.tu="";
+    }
+    
     
     public void setTu(String tu) {
         this.tu = tu;
@@ -43,6 +50,13 @@ public class TuDien {
     public int getTuHatGiong() {
         return tuHatGiong;
     }
-    
+    public static float search(String tuCamXuc,List<TuDien> l){
+        for(int i =0;i<l.size();i++){
+            if((l.get(i).getTu()).equals(tuCamXuc)){
+                return l.get(i).trongSo;
+            }
+        }
+        return 111;
+    }
     
 }

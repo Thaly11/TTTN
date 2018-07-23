@@ -3,8 +3,9 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.lang.String;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class nghenhac_005f1_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -48,6 +49,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -61,7 +65,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <script src=\"js/bootstrap.min.js\"></script>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("       ");
+      out.write("        ");
       out.write("\n");
       out.write("<nav class=\"navbar navbar-inverse\">\n");
       out.write("    <div class=\"container-fluid\">\n");
@@ -105,7 +109,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <li>\n");
       out.write("        <form class=\"form-inline\" action=\"\" method=\"GET\" style=\"position: relative; margin-top:8px;\">\n");
       out.write("            <div class=\"form-group\">\n");
-      out.write("                <input type=\"text\" id=\"timphim\" name=\"timbaihat\" class=\"form-control\" placeholder=\"Tìm ca khúc...\">\n");
+      out.write("                <input type=\"text\" id=\"timphim\" name=\"timphim\" class=\"form-control\" placeholder=\"Tìm ca khúc...\">\n");
       out.write("            </div>\n");
       out.write("            <button type=\"submit\" class=\"btn btn-default\"><span class=\"glyphicon glyphicon-search\"></span></button>\n");
       out.write("            <div class=\"list-group\" id=\"suggestbox\" style=\"position: absolute; z-index: 1;\"></div>\n");
@@ -122,86 +126,83 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("        <div class=\"container\">\n");
       out.write("            <div class=\"row\">\n");
-      out.write("                <div class=\"col\" style=\"position:relative;\">\n");
-      out.write("                    <a href=\"\" style=\"position:absolute; z-index:1; top:0px; left:0px;\"><img class=\"img-responsive\" src=\"/Hinhanh/beat.png\"></img></a>\n");
-      out.write("                     <div id=\"hangCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\n");
-      out.write("                        <!-- Indicators -->\n");
-      out.write("                        <ol class=\"carousel-indicators\" id='imgslidesize'>\n");
-      out.write("                            <li data-target=\"#hangCarousel\" data-slide-to=\"0\" class=\"active\" ></li>\n");
-      out.write("                            <li data-target=\"#hangCarousel\" data-slide-to=\"1\"></li>\n");
-      out.write("                            <li data-target=\"#hangCarousel\" data-slide-to=\"2\"></li>\n");
-      out.write("                            <li data-target=\"#hangCarousel\" data-slide-to=\"3\"></li>\n");
-      out.write("                        </ol>\n");
-      out.write("\n");
-      out.write("                        <!-- Wrapper for slides -->\n");
-      out.write("                        <div class=\"carousel-inner\" role=\"listbox\" id='imgslide'>\n");
-      out.write("                           \n");
-      out.write("                        </div>\n");
-      out.write("\n");
-      out.write("                        <!-- Left and right controls -->\n");
-      out.write("                        <a class=\"left carousel-control\" href=\"#hangCarousel\" role=\"button\" data-slide=\"prev\">\n");
-      out.write("                            <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n");
-      out.write("                            <span class=\"sr-only\">Trước</span>\n");
-      out.write("                        </a>\n");
-      out.write("                        <a class=\"right carousel-control\" href=\"#hangCarousel\" role=\"button\" data-slide=\"next\">\n");
-      out.write("                            <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n");
-      out.write("                            <span class=\"sr-only\">Tiếp</span>\n");
-      out.write("                        </a>\n");
+      out.write("                <div class=\"col-md-12\">\n");
+      out.write("                    <div class=\"container-fluid text-center\">\n");
+      out.write("                        <video id=\"movie-player\" controls>\n");
+      out.write("                            <!--\n");
+      out.write("                            <source src=\"phim/liehuo ruge.mp4\" type=\"video/mp4\">\n");
+      out.write("                            -->\n");
+      out.write("                        </video> \n");
       out.write("                    </div>\n");
+      out.write("                    <p style=\"font-size:25px;\"><span class=\"label label-info\" id=\"rating\"> Đánh giá: </span></p>\n");
       out.write("                </div>\n");
       out.write("            </div>\n");
-      out.write("        </div>\n");
-      out.write("        <div class=\"container\">\n");
-      out.write("\t\t\t<div class=\"row\">\n");
-      out.write("\t\t\t\t<div class=\"col\">\n");
-      out.write("\t\t\t\t\t<p style=\"font-size:25px;\"><span class=\"glyphicon glyphicon-menu-hamburger\"></span>CA KHÚC \n");
-      out.write("\t\t\t\t\t\t<a style=\"font-size:25px; float:right;\" href=\"#\">Xem tất cả</a>\n");
-      out.write("\t\t\t\t\t</p>\n");
-      out.write("\t\t\t\t</div>\n");
-      out.write("\t\t\t</div>\n");
-      out.write("            <div class=\"row\" id=\"musiclist\">\n");
-      out.write("               \n");
+      out.write("            <div class=\"row\">\n");
+      out.write("                <div class=\"col-md-12\">\n");
+      out.write("                    <form action=\"\">\n");
+      out.write("                        <div class=\"form-group\" style=\"font-size:20px;\">\n");
+      out.write("                            <label style=\"color:white;\">Thêm bình luận mới về phim này: </label>\n");
+      out.write("                            <textarea class=\"form-control\" rows=\"5\" name=\"comment\"></textarea>\n");
+      out.write("                        </div>\n");
+      out.write("                        <div class=\"text-right\">\n");
+      out.write("                            <button type=\"submit\" class=\"btn btn-default\">Đăng bình luận</button>\n");
+      out.write("                        </div>\n");
+      out.write("                    </form> \n");
+      out.write("                </div>\n");
+      out.write("                <div class=\"col-md-12\" style=\"font-size:20px;\" id=\"comment\">\n");
+      out.write("                    <p style=\"font-size:35px;\"><span class=\"label label-info\">Bình luận</span></p>\n");
+      out.write("                    \n");
+      out.write("                  \n");
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("        <script>\n");
       out.write("            $(document).ready(function () {\n");
-      out.write("                var preparedImgSlideHtml = '';\n");
-      out.write("                var preparedImgSlideSizeHtml = '';\n");
-      out.write("                $.get(\"http://localhost:3000/music-list\", function (data, status) {\n");
-      out.write("                    var resData = JSON.parse(data);\n");
-      out.write("                    for(var i = 0; i < resData.length; i++){\n");
+      out.write("                var movieId = '");
+
+                    if (request.getParameter("id") != null) {
+                        if (request.getParameter("id") != "") {
+                            out.print(request.getParameter("id"));
+                        }
+                    }
+
+            
+      out.write("';\n");
+      out.write("                if (movieId != '') {\n");
+      out.write("                    $.get(\"http://localhost:3000/music-info?id=\" + movieId, function (data, status) {\n");
+      out.write("                        var resData = JSON.parse(data);\n");
+      out.write("                        document.getElementById(\"movie-player\").src = resData.nhac.link;\n");
+      out.write("                        document.getElementsByTagName(\"title\")[0].innerHTML += resData.nhac.link;\n");
       out.write("                        var totalScore = 0;\n");
-      out.write("                        for(var j = 0; j < resData[i].nhac.danhgia.length; j++){\n");
-      out.write("                            totalScore += Number(resData[i].nhac.danhgia[j].diem);\n");
+      out.write("                        for(var j = 0; j < resData.nhac.danhgia.length; j++){\n");
+      out.write("                            totalScore += Number(resData.nhac.danhgia[j].diem);\n");
       out.write("                        }\n");
-      out.write("                        var ratedScore = Math.round(totalScore/resData[i].nhac.danhgia.length);\n");
-      out.write("                        var preparedHtml = '<div class=\"col-md-3\"><div class=\"container-fluid grayhover\"><a href=\"/MUSIC/nghenhac.jsp?id='+ resData[i]._id +'\"><img class=\"img-responsive\" src=\"' + resData[i].nhac.hinhanh + '\"  style=\"margin-top:5px;\" alt=\" + resData[i].nhac.tenbaihat + \"></a><p>'\n");
-      out.write("                                + resData[i].nhac.tenbaihat + '</p><p>Đánh giá:('\n");
-      out.write("                                + ratedScore + '/10<span class=\"glyphicon glyphicon-star\"></span>) '\n");
-      out.write("                                + resData[i].nhac.danhgia.length + ' lượt</p><p><span class=\"glyphicon glyphicon-eye-open\" style=\"color:red\"></span>'\n");
-      out.write("                                + resData[i].nhac.luotxem + '  <span class=\"glyphicon glyphicon-comment\" style=\"color:red\"></span> '\n");
-      out.write("                                + resData[i].nhac.binhluan.length + '</p></div></div>';\n");
-      out.write("                        document.getElementById('musiclist').innerHTML += preparedHtml;\n");
-      out.write("                        if(i === 0){\n");
-      out.write("                            preparedImgSlideSizeHtml += '<li data-target=\"#hangCarousel\" data-slide-to=\"' + i + '\" class=\"active\"></li>';\n");
-      out.write("                            //poster\n");
-      out.write("                            preparedImgSlideHtml += '<div class=\"item active\"><img class=\"img-responsive center-block\" src=\"'\n");
-      out.write("                                + resData[i].nhac.poster + '\" alt=\"' + resData[i].nhac.tenbaihat + '\"></div>';\n");
+      out.write("                        var ratedScore = Math.round(totalScore/resData.nhac.danhgia.length);\n");
+      out.write("                        var ratingHTML = '('+ ratedScore +'đ/'+ resData.nhac.danhgia.length +' lượt)';\n");
+      out.write("                        var star = '';\n");
+      out.write("                        var emptyStar = '';\n");
+      out.write("                        for(var i = 0; i < 10; i++){\n");
+      out.write("                            if(i < ratedScore){\n");
+      out.write("                                star += '&#xe006;';\n");
+      out.write("                            }\n");
+      out.write("                            else{\n");
+      out.write("                                emptyStar += '&#xe007;';\n");
+      out.write("                            }\n");
       out.write("                        }\n");
-      out.write("                        else{\n");
-      out.write("                            preparedImgSlideSizeHtml += '<li data-target=\"#hangCarousel\" data-slide-to=\"' + i + '\"></li>';\n");
-      out.write("                            //poster\n");
-      out.write("                            preparedImgSlideHtml += '<div class=\"item\"><img class=\"img-responsive center-block\" src=\"'\n");
-      out.write("                                + resData[i].nhac.poster + '\" alt=\"' + resData[i].nhac.tenbaihat + '\"></div>';\n");
+      out.write("                        document.getElementById(\"rating\").innerHTML += ratingHTML + ' <span class=\"glyphicon\" style=\"color:yellow;\">'+ star +'</span><span class=\"glyphicon\" style=\"color:yellow;\">'+ emptyStar +'</span>';\n");
+      out.write("                        var commentHTML = '';\n");
+      out.write("                        for(var i = 0; i < resData.nhac.binhluan.length; i++){\n");
+      out.write("                            commentHTML += '<div class=\"well well-sm\"><p>' \n");
+      out.write("                                    + resData.nhac.binhluan[i].email + ':'\n");
+      out.write("                                    + resData.nhac.binhluan[i].noidung +'</p><p class=\"text-right\">Đăng lúc ' \n");
+      out.write("                                    + resData.nhac.binhluan[i].thoigian +'</p></div>';\n");
       out.write("                        }\n");
-      out.write("                    }\n");
-      out.write("                    document.getElementById('imgslidesize').innerHTML = preparedImgSlideSizeHtml;\n");
-      out.write("                    document.getElementById('imgslide').innerHTML = preparedImgSlideHtml;\n");
-      out.write("                });\n");
+      out.write("                        document.getElementById(\"comment\").innerHTML += commentHTML;\n");
+      out.write("                    });\n");
+      out.write("                }\n");
       out.write("            });\n");
       out.write("        </script>\n");
       out.write("    </body>\n");
-      out.write("</html>");
+      out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

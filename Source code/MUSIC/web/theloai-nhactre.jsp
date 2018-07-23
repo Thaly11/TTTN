@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> MUSIC Trang chủ </title>
+        <title> MUSIC </title>
         <meta  http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -12,12 +12,12 @@
         <script src="js/bootstrap.min.js"></script>
     </head>
     <body>
-       <%@include file="header.jsp" %>
+        <%@include file="header.jsp" %>
         <div class="container">
             <div class="row">
                 <div class="col" style="position:relative;">
-                    <a href="" style="position:absolute; z-index:1; top:0px; left:0px;"><img class="img-responsive" src="/Hinhanh/beat.png"></img></a>
-                     <div id="hangCarousel" class="carousel slide" data-ride="carousel">
+                    <a href="" style="position:absolute; z-index:1; top:0px; left:0px;"><img class="img-responsive"src="image/beat.png"></img></a>
+                    <div id="hangCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators" id='imgslidesize'>
                             <li data-target="#hangCarousel" data-slide-to="0" class="active" ></li>
@@ -45,13 +45,13 @@
             </div>
         </div>
         <div class="container">
-			<div class="row">
-				<div class="col">
-					<p style="font-size:25px;"><span class="glyphicon glyphicon-menu-hamburger"></span>CA KHÚC 
-						<a style="font-size:25px; float:right;" href="#">Xem tất cả</a>
-					</p>
-				</div>
-			</div>
+            <div class="row">
+                <div class="col">
+                    <p style="font-size:25px; color:white;"><span class="glyphicon glyphicon-menu-hamburger"></span>CA KHÚC
+                        <span style="font-size:25px; float:right;">Xem tất cả</span>
+                    </p>
+                </div>
+            </div>
             <div class="row" id="musiclist">
                
             </div>
@@ -60,7 +60,7 @@
             $(document).ready(function () {
                 var preparedImgSlideHtml = '';
                 var preparedImgSlideSizeHtml = '';
-                $.get("http://localhost:3000/music-list", function (data, status) {
+                $.get("http://localhost:3000/music-list/nhac-tre", function (data, status) {
                     var resData = JSON.parse(data);
                     for(var i = 0; i < resData.length; i++){
                         var totalScore = 0;
