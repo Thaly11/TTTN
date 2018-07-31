@@ -123,7 +123,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"container\">\n");
       out.write("            <div class=\"row\">\n");
       out.write("                <div class=\"col\" style=\"position:relative;\">\n");
-      out.write("                    <a href=\"\" style=\"position:absolute; z-index:1; top:0px; left:0px;\"><img class=\"img-responsive\" src=\"/Hinhanh/beat.png\"></img></a>\n");
+      out.write("                    <a href=\"\" style=\"position:absolute; z-index:1; top:0px; left:0px;\"><img class=\"img-responsive\" src=\"image/beat.png\"></img></a>\n");
       out.write("                     <div id=\"hangCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\n");
       out.write("                        <!-- Indicators -->\n");
       out.write("                        <ol class=\"carousel-indicators\" id='imgslidesize'>\n");
@@ -176,12 +176,18 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        }\n");
       out.write("                        var ratedScore = Math.round(totalScore/resData[i].nhac.danhgia.length);\n");
       out.write("                        var preparedHtml = '<div class=\"col-md-3\"><div class=\"container-fluid grayhover\"><a href=\"/MUSIC/nghenhac.jsp?id='+ resData[i]._id +'\"><img class=\"img-responsive\" src=\"' + resData[i].nhac.hinhanh + '\"  style=\"margin-top:5px;\" alt=\" + resData[i].nhac.tenbaihat + \"></a><p>'\n");
-      out.write("                                + resData[i].nhac.tenbaihat + '</p><p>Đánh giá:('\n");
+      out.write("                                + resData[i].nhac.tenbaihat + '</p><p>Sáng tác:'\n");
+      out.write("                                + resData[i].nhac.sangtac + '</p><p>Ca sĩ: '\n");
+      out.write("                                + resData[i].nhac.casi + '</p><p>Thể loại: '\n");
+      out.write("                                + resData[i].nhac.theloai + '</p><p>Quốc gia: '\n");
+      out.write("                                + resData[i].nhac.quocgia + '</p><p>Đánh giá: '\n");
       out.write("                                + ratedScore + '/10<span class=\"glyphicon glyphicon-star\"></span>) '\n");
       out.write("                                + resData[i].nhac.danhgia.length + ' lượt</p><p><span class=\"glyphicon glyphicon-eye-open\" style=\"color:red\"></span>'\n");
       out.write("                                + resData[i].nhac.luotxem + '  <span class=\"glyphicon glyphicon-comment\" style=\"color:red\"></span> '\n");
       out.write("                                + resData[i].nhac.binhluan.length + '</p></div></div>';\n");
+      out.write("                        \n");
       out.write("                        document.getElementById('musiclist').innerHTML += preparedHtml;\n");
+      out.write("                        \n");
       out.write("                        if(i === 0){\n");
       out.write("                            preparedImgSlideSizeHtml += '<li data-target=\"#hangCarousel\" data-slide-to=\"' + i + '\" class=\"active\"></li>';\n");
       out.write("                            //poster\n");

@@ -24,7 +24,7 @@ public class ModuleXtract {
     
 
 
-        private void xTract(String vanBan)
+        public String xTract(String vanBan)
         {
         String strTextOut = "";
         vanBan = vanBan.replace('!', '.'); // chuy?n d?u k?t ! -> .
@@ -80,12 +80,12 @@ public class ModuleXtract {
             }
             }
             createVector();
-            summary();
+            return summary();
         }
 
             
         
-        public TuDien findTerm(String Term){
+        private TuDien findTerm(String Term){
             for (int i = 0; i < tuDien.size(); i++) {
                         TuDien temp = tuDien.get(i);
                         if(temp.getTu().equals(Term)){
@@ -95,7 +95,7 @@ public class ModuleXtract {
         }
             return new TuDien();
     }
-        public void createVector() {
+        private void createVector() {
         G = TermValues;
         N = new ArrayList<Float>();
         P = new ArrayList<Float>();
@@ -129,40 +129,29 @@ public class ModuleXtract {
             return 0;
         return (sumPowX / denominator);
     }
-        public void summary(){
+        public String summary(){
         
         double cosinNG = (double) Math.round(coSin(N) * 1000) / 1000;
         double cosinPG = (double) Math.round(coSin(P) * 1000) / 1000;
         double result = cosinPG-cosinNG;
             System.out.println("cosin(P,G): "+cosinPG+" | "+ "cosin(N,G): "+cosinNG);
         if (result>0) {
-            System.out.println("Tích cực");
+            return "Tích cực";
         } else {
             if (result == 0) {
-                System.out.println("Trung lập");
+                return "Trung lập";
             } else {
-                System.out.println("Tiêu cực");
+                return "Tiêu cực";
             }
         }
 
-        //str += " | cosin(N,G)=" + cosinNG + " | consin(P,G)=" + cosinPG;
-
-        //System.out.println("Summary : "+str);
+        
     }
-        public static void main(String[] args) {
+        
+       public static void main(String[] args) {
         ModuleXtract  xTract= new ModuleXtract();
-        xTract.xTract("lời này hát rất ý nghĩa. bài này hát rất hay.");
-        //String []front1 = {"rất-0.5","cực-0.5","cực kì-2","vô cùng-3"}; // chuỗi những từ đứng trước seed
-        //String []front2= {"cực kì","vô cùng"}; // 2
-       // String seed ="";
-//        Scanner scn = new Scanner(System.in);
-//            System.out.print("Nhập từ hạt giống:");
-//            seed=scn.nextLine();
-//            System.out.println(temp[0]+" "+temp[1]);
-           // for(int i=0;i<front1.length;i++){
-           //     String []temp = front1[i].split("-");
-            //    System.out.println(temp[0]+" "+temp[1]);
-           // }
-    }
+        String result = xTract.xTract("bai này hay ghê. lời bài hát cũng được.");
+        System.out.println(result);
+}
 }
 

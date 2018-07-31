@@ -51,6 +51,7 @@ public final class nghenhac_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -128,7 +129,7 @@ public final class nghenhac_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"col-md-12\">\n");
       out.write("                    <div class=\"container-fluid text-center\">\n");
       out.write("                        <video id=\"music-player\" controls>\n");
-      out.write("                           \n");
+      out.write("                            \n");
       out.write("                        </video> \n");
       out.write("                    </div>\n");
       out.write("                    <p style=\"font-size:25px;\"><span class=\"label label-info\" id=\"rating\"> Đánh giá: </span></p>\n");
@@ -136,15 +137,19 @@ public final class nghenhac_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("            <div class=\"row\">\n");
       out.write("                <div class=\"col-md-12\">\n");
-      out.write("                    <form action=\"\">\n");
+      out.write("                    <div>\n");
+      out.write("                        <div class=\"form-group\">\n");
+      out.write("                            <label for=\"usr\" style=\"color:red;\">Email:</label>\n");
+      out.write("                            <input type=\"email\" class=\"form-control\" id=\"mail\">\n");
+      out.write("                        </div>\n");
       out.write("                        <div class=\"form-group\" style=\"font-size:20px;\">\n");
-      out.write("                            <label style=\"color:white;\">Thêm bình luận mới về bài hát này: </label>\n");
-      out.write("                            <textarea class=\"form-control\" rows=\"5\" name=\"comment\"></textarea>\n");
+      out.write("                            <label style=\"color:red;\">Nội dung: </label>\n");
+      out.write("                            <textarea class=\"form-control\" rows=\"5\" id=\"commentvalue\"></textarea>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"text-right\">\n");
-      out.write("                            <button type=\"submit\" class=\"btn btn-default\">Đăng bình luận</button>\n");
+      out.write("                            <button class=\"btn btn-default\" id=\"submitcomment\">Đăng bình luận</button>\n");
       out.write("                        </div>\n");
-      out.write("                    </form> \n");
+      out.write("                    </div> \n");
       out.write("                </div>\n");
       out.write("                <div class=\"col-md-12\" style=\"font-size:20px;\" id=\"comment\">\n");
       out.write("                    <p style=\"font-size:35px;\"><span class=\"label label-info\">Bình luận</span></p>\n");
@@ -185,16 +190,54 @@ public final class nghenhac_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                emptyStar += '&#xe007;';\n");
       out.write("                            }\n");
       out.write("                        }\n");
+      out.write("                        \n");
       out.write("                        document.getElementById(\"rating\").innerHTML += ratingHTML + ' <span class=\"glyphicon\" style=\"color:yellow;\">' + star + '</span><span class=\"glyphicon\" style=\"color:yellow;\">' + emptyStar + '</span>';\n");
+      out.write("                         \n");
       out.write("                        var commentHTML = '';\n");
-      out.write("                        for (var i = 0; i < resData.nhac.binhluan.length; i++) {\n");
+      out.write("                       for (var i = 0; i < resData.nhac.binhluan.length; i++) {\n");
       out.write("                            commentHTML += '<div class=\"well well-sm\"><p>'\n");
       out.write("                                    + resData.nhac.binhluan[i].email + ':'\n");
       out.write("                                    + resData.nhac.binhluan[i].noidung + '</p><p class=\"text-right\">Đăng lúc '\n");
       out.write("                                    + resData.nhac.binhluan[i].thoigian + '</p></div>';\n");
       out.write("                        }\n");
       out.write("                        document.getElementById(\"comment\").innerHTML += commentHTML;\n");
+      out.write("                        var infoHTML = '<p>Tên phim: ' + resData.nhac.tenbaihat + '</p><p>Đạo diễn: '\n");
+      out.write("                                + resData.nhac.sangtac + '</p><p>Diễn viên: '\n");
+      out.write("                                + resData.nhac.casi + '</p><p>Thể loại: '\n");
+      out.write("                                + resData.nhac.theloai + '</p><p>Quốc gia: '\n");
+      out.write("                                + resData.nhac.quocgia + '</p><p>Lượt xem: '\n");
+      out.write("                                + resData.nhac.luotxem + '</p>' + ratingHTML;\n");
+      out.write("                        document.getElementById(\"music-info\").innerHTML += infoHTML;\n");
+      out.write("                         \n");
       out.write("                    });\n");
+      out.write("                }\n");
+      out.write("            });\n");
+      out.write("            //binh luan\n");
+      out.write("            $('#submitcomment').click(function (){\n");
+      out.write("                var musicId = '");
+                    if (request.getParameter("id") != null) {
+                        if (request.getParameter("id") != "") {
+                            out.print(request.getParameter("id"));
+                        }
+                    }
+ 
+                
+      out.write("';\n");
+      out.write("                if(musicId !== ''){\n");
+      out.write("                   var commentvalue = document.getElementById('commentvalue').value;\n");
+      out.write("                   var email= document.getElementById('mail').value;\n");
+      out.write("                   if(commentvalue !== '' && email !== ''){\n");
+      out.write("                       $.get(\"http://localhost:3000/add-comment\",\n");
+      out.write("                                {\n");
+      out.write("                                    id: musicId,\n");
+      out.write("                                    email: email,\n");
+      out.write("                                    noidung: commentvalue\n");
+      out.write("                                 },\n");
+      out.write("                            function(data, status){\n");
+      out.write("                                var resData = JSON.parse(data);\n");
+      out.write("                                alert(resData.message);\n");
+      out.write("                        });\n");
+      out.write("                   }\n");
       out.write("                }\n");
       out.write("            });\n");
       out.write("        </script>\n");

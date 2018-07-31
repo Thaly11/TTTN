@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row">
                 <div class="col" style="position:relative;">
-                    <a href="" style="position:absolute; z-index:1; top:0px; left:0px;"><img class="img-responsive" src="/Hinhanh/beat.png"></img></a>
+                    <a href="" style="position:absolute; z-index:1; top:0px; left:0px;"><img class="img-responsive" src="image/beat.png"></img></a>
                      <div id="hangCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators" id='imgslidesize'>
@@ -69,12 +69,18 @@
                         }
                         var ratedScore = Math.round(totalScore/resData[i].nhac.danhgia.length);
                         var preparedHtml = '<div class="col-md-3"><div class="container-fluid grayhover"><a href="/MUSIC/nghenhac.jsp?id='+ resData[i]._id +'"><img class="img-responsive" src="' + resData[i].nhac.hinhanh + '"  style="margin-top:5px;" alt=" + resData[i].nhac.tenbaihat + "></a><p>'
-                                + resData[i].nhac.tenbaihat + '</p><p>Đánh giá:('
+                                + resData[i].nhac.tenbaihat + '</p><p>Sáng tác:'
+                                + resData[i].nhac.sangtac + '</p><p>Ca sĩ: '
+                                + resData[i].nhac.casi + '</p><p>Thể loại: '
+                                + resData[i].nhac.theloai + '</p><p>Quốc gia: '
+                                + resData[i].nhac.quocgia + '</p><p>Đánh giá: '
                                 + ratedScore + '/10<span class="glyphicon glyphicon-star"></span>) '
                                 + resData[i].nhac.danhgia.length + ' lượt</p><p><span class="glyphicon glyphicon-eye-open" style="color:red"></span>'
                                 + resData[i].nhac.luotxem + '  <span class="glyphicon glyphicon-comment" style="color:red"></span> '
                                 + resData[i].nhac.binhluan.length + '</p></div></div>';
+                        
                         document.getElementById('musiclist').innerHTML += preparedHtml;
+                        
                         if(i === 0){
                             preparedImgSlideSizeHtml += '<li data-target="#hangCarousel" data-slide-to="' + i + '" class="active"></li>';
                             //poster
